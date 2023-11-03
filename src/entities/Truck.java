@@ -41,7 +41,7 @@ public class Truck {
 	}
 	
 	public String toString() {
-		return plate + ", " + year + ", " + axle + " axles";
+		return "Plate: " + plate + ", year: " + year + ", " + axle + " axles";
 	}
 	
 }

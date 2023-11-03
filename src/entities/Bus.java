@@ -40,6 +40,8 @@ public class Bus {
 		this.year = year;
 	}
 	
-	
+	public String toString() {
+		return "Plate: " + plate + ", year: " + year + ", " + seats + " seats";
+	}
 
 }
