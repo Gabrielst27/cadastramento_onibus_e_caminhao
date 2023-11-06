@@ -60,7 +60,17 @@ public class Program {
 			System.out.println();
 		}
 		
+		System.out.println("Bus list: ");
+		for (Bus b : busList) {
+			System.out.println(b);
+		}
 		
+		System.out.println();
+		
+		System.out.println("Truck list: ");
+		for (Truck t : truckList) {
+			System.out.print(t);
+		}
 		
 		sc.close();
 
