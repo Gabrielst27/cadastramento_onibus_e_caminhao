@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -15,6 +17,9 @@ public class Program {
 		
 		int aux = 1;
 		
+		List<Bus> busList = new ArrayList<>();
+		List<Truck> truckList = new ArrayList<>();
+		
 		while (aux == 1) {
 			System.out.print("Enter vehicle type (1 = BUS or 2 = TRUCK): ");
 			int type = sc.nextInt();
@@ -29,6 +34,7 @@ public class Program {
 				int seats = sc.nextInt();
 				
 				Bus bus = new Bus(seats, plate, year);
+				busList.add(bus);
 				
 				System.out.print("Continue? (1 = Yes or 2 = No): ");
 				aux = sc.nextInt();
@@ -42,6 +48,7 @@ public class Program {
 				int axles = sc.nextInt();
 				
 				Truck truck = new Truck(axles, plate, year);
+				truckList.add(truck);
 				
 				System.out.print("Continue? (1 = Yes or 2 = No): ");
 				aux = sc.nextInt();
@@ -52,6 +59,8 @@ public class Program {
 			}
 			System.out.println();
 		}
+		
+		
 		
 		sc.close();
 
