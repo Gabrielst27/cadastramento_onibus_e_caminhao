@@ -13,31 +13,45 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Enter vehicle type (1 = BUS or 2 = TRUCK): ");
-		int type = sc.nextInt();
+		int aux = 1;
 		
-		if (type == 1) {
-			sc.nextLine();
-			System.out.print("Enter vehicle plate: ");
-			String plate = sc.nextLine();
-			System.out.print("Enter vehicle year: ");
-			int year = sc.nextInt();
-			System.out.print("Enter vehicle seats: ");
-			int seats = sc.nextInt();
+		while (aux == 1) {
+			System.out.print("Enter vehicle type (1 = BUS or 2 = TRUCK): ");
+			int type = sc.nextInt();
 			
-			Bus bus = new Bus(seats, plate, year);
-		} else if (type == 2) {
-			sc.nextLine();
-			System.out.print("Enter vehicle plate: ");
-			String plate = sc.nextLine();
-			System.out.print("Enter vehicle year: ");
-			int year = sc.nextInt();
-			System.out.print("Enter vehicle axles: ");
-			int axles = sc.nextInt();
-			
-			Truck truck = new Truck(axles, plate, year);
+			if (type == 1) {
+				sc.nextLine();
+				System.out.print("Enter vehicle plate: ");
+				String plate = sc.nextLine();
+				System.out.print("Enter vehicle year: ");
+				int year = sc.nextInt();
+				System.out.print("Enter vehicle seats: ");
+				int seats = sc.nextInt();
+				
+				Bus bus = new Bus(seats, plate, year);
+				
+				System.out.print("Continue? (1 = Yes or 2 = No): ");
+				aux = sc.nextInt();
+			} else if (type == 2) {
+				sc.nextLine();
+				System.out.print("Enter vehicle plate: ");
+				String plate = sc.nextLine();
+				System.out.print("Enter vehicle year: ");
+				int year = sc.nextInt();
+				System.out.print("Enter vehicle axles: ");
+				int axles = sc.nextInt();
+				
+				Truck truck = new Truck(axles, plate, year);
+				
+				System.out.print("Continue? (1 = Yes or 2 = No): ");
+				aux = sc.nextInt();
+			} else {
+				System.out.println("ERROR! Invalid value!");
+				System.out.print("Try again? (1 = Yes or 2 = No): ");
+				aux = sc.nextInt();
+			}
+			System.out.println();
 		}
-		
 		
 		sc.close();
 
